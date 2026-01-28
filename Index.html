@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Option Official | Trading Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #051024; /* Deep Navy */
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Gradient overlay for the bottom section */
+        .bottom-gradient {
+            background: linear-gradient(to top, #051024 10%, rgba(5, 16, 36, 0.8) 50%, transparent 100%);
+        }
+
+        /* Glassmorphism for the video card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button-yellow {
+            background: linear-gradient(to bottom, #facc15, #eab308);
+            box-shadow: 0 4px 0 #a16207;
+            transition: all 0.1s;
+        }
+        .cta-button-yellow:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0 #a16207;
+        }
+
+        .cta-button-telegram {
+            background: #0088cc; /* Telegram Blue */
+            color: white;
+            box-shadow: 0 4px 0 #005f8f;
+            transition: all 0.1s;
+        }
+        .cta-button-telegram:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 0 #005f8f;
+        }
+
+        /* Pulse animation for the live signal */
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+        }
+        .live-dot {
+            animation: pulse-green 2s infinite;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen relative">
+
+    <!-- Background Elements -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600 rounded-full blur-[120px] opacity-20"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-blue-800 rounded-full blur-[120px] opacity-30"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4 md:px-8 border-b border-white/10 bg-[#020b1c]">
+        <div class="flex items-center gap-2">
+            <!-- Logo -->
+            <img src="logo.png" onerror="this.src='https://placehold.co/150x40/020b1c/ffffff?text=POCKET+OPTION'; this.style.height='30px';" alt="Pocket Option Logo" class="h-8 md:h-10 object-contain">
+        </div>
+        <div class="text-xs md:text-sm font-semibold text-gray-300">
+            Official Trading Platform
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col items-center justify-start pt-6 pb-24 px-4 text-center z-10">
+        
+        <!-- Hero Text -->
+        <div class="mb-6 animate-fade-in-down">
+            <h1 class="text-3xl md:text-4xl font-black text-yellow-400 uppercase tracking-wide drop-shadow-lg mb-2">
+                Good To See You
+            </h1>
+            <p class="text-xs md:text-sm text-gray-200 font-semibold max-w-md mx-auto leading-relaxed">
+                BINARY OPTIONS, FOREX AND STOCKS WITH <span class="text-yellow-400">FAST WITHDRAWALS.</span>
+            </p>
+        </div>
+
+        <!-- Main Card Section -->
+        <div class="w-full max-w-lg relative group">
+            <!-- Card Container -->
+            <div class="glass-card rounded-2xl overflow-hidden p-1 relative">
+                
+                <!-- Text inside card -->
+                <div class="absolute top-4 left-4 z-20 flex flex-col items-start drop-shadow-md">
+                    <h2 class="text-2xl font-black text-white italic uppercase leading-none">
+                        POCKET OPTION
+                    </h2>
+                    <span class="text-lg font-bold text-yellow-400 italic">OFFICIAL</span>
+                </div>
+
+                <!-- Status Badge -->
+                <div class="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-2 border border-white/10">
+                    <div class="w-2 h-2 bg-green-400 rounded-full live-dot"></div>
+                    <span class="text-xs font-bold text-white">Live Signals</span>
+                </div>
+
+                <!-- Video Element -->
+                <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden shadow-inner mb-20 md:mb-24">
+                    <video class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" autoplay loop muted playsinline poster="https://placehold.co/600x400/0a1e3c/FFF?text=Video+Loading...">
+                        <source src="video.mp4" type="video/mp4">
+                        <div class="w-full h-full flex items-center justify-center bg-slate-800">
+                            <i class="fas fa-play-circle text-6xl text-white/50"></i>
+                        </div>
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                </div>
+
+                <!-- BUTTON 1: Registration (Primary/Top) -->
+                <div class="absolute bottom-0 left-0 w-full p-4 z-30 transform translate-y-4">
+                    <a href="https://goo.su/ER0dN" class="cta-button-yellow w-full block py-4 rounded-xl text-black font-black text-lg md:text-xl uppercase tracking-wider flex items-center justify-center gap-2">
+                        Register Your Trading Account
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Carousel Dots -->
+            <div class="flex justify-center gap-2 mt-8 mb-4">
+                <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div class="w-3 h-3 rounded-full bg-white/30"></div>
+                <div class="w-3 h-3 rounded-full bg-white/30"></div>
+                <div class="w-3 h-3 rounded-full bg-white/30"></div>
+                <div class="w-3 h-3 rounded-full bg-white/30"></div>
+            </div>
+        </div>
+
+        <!-- BUTTON 2: Telegram (Secondary/Bottom) -->
+        <div class="w-full max-w-xs mt-2 z-20">
+            <a href="https://t.me/+IqG2TaWYEMZkZGE1" target="_blank" class="cta-button-telegram w-full block py-3 rounded-full text-center font-bold text-lg uppercase tracking-wide flex items-center justify-center gap-2">
+                <i class="fab fa-telegram-plane"></i>
+                Print Money On Telegram
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Bottom Section: Payments -->
+    <div class="w-full relative mt-auto">
+        <div class="bottom-gradient w-full pt-10 pb-6 px-4">
+            <div class="max-w-4xl mx-auto backdrop-blur-md bg-white/5 rounded-xl border border-white/10 p-4">
+                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-8 opacity-80 grayscale hover:grayscale-0 transition-all duration-300">
+                    <div class="flex items-center gap-1 text-white font-bold text-sm"><i class="fas fa-university text-purple-400 text-xl"></i> <span>UPI</span></div>
+                    <div class="flex items-center gap-1 text-white font-bold text-sm"><i class="fab fa-google-pay text-white text-xl"></i> <span>GPay</span></div>
+                    <div class="flex items-center gap-1 text-white font-bold text-sm"><i class="fab fa-bitcoin text-orange-500 text-xl"></i> <span>Bitcoin</span></div>
+                    <div class="flex items-center gap-1 text-white font-bold text-sm"><i class="fab fa-ethereum text-blue-400 text-xl"></i> <span>ETH</span></div>
+                    <div class="flex items-center gap-1 text-white font-bold text-sm"><i class="fas fa-wallet text-green-400 text-xl"></i> <span>Tether</span></div>
+                    <div class="flex items-center gap-1 text-white font-bold text-sm"><span class="text-red-500 font-black italic">AstroPay</span></div>
+                </div>
+            </div>
+
+            <p class="text-center text-gray-500 text-[10px] mt-4">
+                Trading involves risk. Please trade responsibly. Pocket Option Official &copy; 2024.
+            </p>
+        </div>
+    </div>
+
+    <!-- Script to handle video autoplay on mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.querySelector('video');
+            if (video) {
+                video.muted = true;
+                video.play().catch(e => console.log('Autoplay prevented:', e));
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+                  
