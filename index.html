@@ -32,6 +32,7 @@
         .cta-button-yellow {
             background: linear-gradient(to bottom, #facc15, #eab308);
             box-shadow: 0 4px 0 #a16207;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
             transition: all 0.1s;
         }
         .cta-button-yellow:active {
@@ -40,14 +41,14 @@
         }
 
         .cta-button-telegram {
-            background: #0088cc; /* Telegram Blue */
+            background: #24A1DE; /* Official Telegram Blue */
             color: white;
-            box-shadow: 0 4px 0 #005f8f;
+            box-shadow: 0 4px 0 #1b7cae;
             transition: all 0.1s;
         }
         .cta-button-telegram:active {
             transform: translateY(4px);
-            box-shadow: 0 0 0 #005f8f;
+            box-shadow: 0 0 0 #1b7cae;
         }
 
         /* Pulse animation for the live signal */
@@ -113,8 +114,11 @@
                 </div>
 
                 <!-- Video Element -->
-                <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden shadow-inner mb-20 md:mb-24">
-                    <video class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" autoplay loop muted playsinline poster="https://placehold.co/600x400/0a1e3c/FFF?text=Video+Loading...">
+                <!-- Note: The 'mb-20' creates space at the bottom for the Register button -->
+                <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden shadow-inner mb-24 md:mb-28">
+                    <video class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
+                           autoplay loop muted playsinline 
+                           poster="https://placehold.co/600x400/051024/FACC15?text=POCKET+OPTION+OFFICIAL">
                         <source src="video.mp4" type="video/mp4">
                         <div class="w-full h-full flex items-center justify-center bg-slate-800">
                             <i class="fas fa-play-circle text-6xl text-white/50"></i>
@@ -124,7 +128,7 @@
                 </div>
 
                 <!-- BUTTON 1: Registration (Primary/Top) -->
-                <div class="absolute bottom-0 left-0 w-full p-4 z-30 transform translate-y-4">
+                <div class="absolute bottom-0 left-0 w-full p-4 z-30 transform translate-y-2">
                     <a href="https://goo.su/ER0dN" class="cta-button-yellow w-full block py-4 rounded-xl text-black font-black text-lg md:text-xl uppercase tracking-wider flex items-center justify-center gap-2">
                         Register Your Trading Account
                     </a>
@@ -176,8 +180,22 @@
         document.addEventListener('DOMContentLoaded', () => {
             const video = document.querySelector('video');
             if (video) {
+                // Muted is required for autoplay on most browsers
                 video.muted = true;
-                video.play().catch(e => console.log('Autoplay prevented:', e));
+                
+                // Try to play
+                var playPromise = video.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        // Automatic playback started!
+                        console.log("Video playing");
+                    })
+                    .catch(error => {
+                        // Auto-play was prevented
+                        console.log("Autoplay prevented, user interaction required.");
+                    });
+                }
             }
         });
     </script>
@@ -185,4 +203,3 @@
 </html>
 
 
-                  
